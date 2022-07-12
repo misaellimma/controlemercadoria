@@ -1,0 +1,26 @@
+<div class="titulo">
+    <h1 id="title" class="display-5">Vendas</h1>
+    <hr>
+</div>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <button class="btn btn-dark" type="button">Adicionar venda</button>
+</div>
+
+<p>Historico de vendas</p>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Cód Venda</th>
+    <th scope="col">Data/Hora</th>
+    <th scope="col">Valor</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let venda of vendas; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ venda.dataCadastro }}</td>
+    <td>{{ venda.valor | number }}</td>
+  </tr>
+  </tbody>
+</table>
